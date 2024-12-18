@@ -47,7 +47,7 @@ const Header = () => {
               <img
                 src={images[currentImageIndex]}
                 alt={`Gallery ${currentImageIndex + 1}`}
-                className="w-full h-full object-cover rounded-lg transition-opacity duration-500 ease-in-out"
+                className="w-full h-full object-fit rounded-lg transition-opacity duration-500 ease-in-out"
               />
             </div>
           </div>
