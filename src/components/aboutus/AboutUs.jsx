@@ -3,7 +3,7 @@ import React from 'react'
 const AboutUs = () => {
   return (
     <>
-    <div className='h-screen ml-[5%] mt-10 flex flex-col'>
+    <div className='mb-[50px] ml-[5%] mt-10 flex flex-col'>
         <h1 className='text-indigo-800 font-medium text-[40px]'>About SPN Traders</h1>
         <p className='text-[18px] w-[90%] mt-6'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil qui, quos numquam, aperiam voluptate vel repudiandae voluptatum nostrum sit sint a debitis sunt recusandae magnam laudantium eum porro. Soluta, iusto.
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur cum non modi eaque libero possimus nemo, inventore nam, eum laborum porro? Dignissimos harum ducimus iure sit. Ab vitae similique harum!, 

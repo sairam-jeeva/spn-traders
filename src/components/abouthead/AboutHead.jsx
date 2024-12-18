@@ -1,8 +1,4 @@
 import React from 'react';
-import image1 from '../../assets/img1.jpg';
-import image2 from '../../assets/img3.jpg';
-import image3 from '../../assets/img1.jpg';
-import image4 from '../../assets/img3.jpg';
 
 const AboutHead = () => {
   return (
@@ -20,23 +16,6 @@ const AboutHead = () => {
         <button className="w-32 h-12 md:w-36 md:h-14 lg:w-40 lg:h-14 rounded-xl bg-white mt-8 text-indigo-800 text-sm md:text-base font-medium transition hover:bg-gray-200">
           Some Button
         </button>
-
-        {/* Logos Section */}
-        <div className="mt-20 w-full">
-           
-          <div className="flex justify-center gap-32  flex-wrap">
-
-              {[image1, image2, image3, image4].map((image, index) => (
-                <img
-                  key={index}
-                  src={image}
-                  alt={`Customer ${index + 1}`}
-                  className="h-[70px] md:h-[90px] rounded-2xl lg:h-[100px] w-auto"
-                />
-            ))}
-            </div>
-          
-        </div>
       </div>
     </>
   );

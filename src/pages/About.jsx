@@ -3,14 +3,14 @@ import AboutHead from '../components/abouthead/AboutHead'
 import AboutUs from '../components/aboutus/AboutUs'
 import Footer from '../components/Footer'
 import NavBar from '../components/NavBar'
-// import OurCustomers from '../components/ourcustomers/OurCustomers'
+import OurCustomers from '../components/ourcustomers/OurCustomers'
 
 const About = () => {
   return (
     <>
     <NavBar/>
     <AboutHead/>
-    {/* <OurCustomers/> */}
+    <OurCustomers/>
     <AboutUs/>
     <Footer/>
     </>
