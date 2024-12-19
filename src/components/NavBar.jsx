@@ -45,7 +45,7 @@ const NavBar = () => {
           {/* Call-to-Action Button */}
           <div className="hidden md:block">
             <a
-              href="/contact-us"
+              href="/contact"
               className="bg-white text-indigo-600 text-[18px] font-medium px-6 py-2 rounded-xl shadow hover:bg-gray-200 hover:text-indigo-600 transition duration-300"
             >
               Contact Us
