@@ -1,20 +1,10 @@
 import React, { useState } from 'react';
-import product1 from '../../assets/beer_cullet.jpeg';
-import product2 from '../../assets/blue_beer.jpg';
-import product3 from '../../assets/glass.jpeg';
-import product4 from '../../assets/glass2.jpg';
-import product5 from '../../assets/green_cullets.jpeg'
-import product6 from '../../assets/img1.jpg'
-import product7 from '../../assets/img2.jpg'
-import product9 from '../../assets/img3.jpg'
-import product8 from '../../assets/logo.jpg'
-import product10 from '../../assets/kraft.jpeg'
-// import product11 from '../../assets/logo.jpg'
-// import product12 from '../../assets/metal.jpeg'
-// import product13 from '../../assets/beer_cullet.jpeg'
-// import product14 from '../../assets/glass.jpeg'
-// import product15 from '../../assets/green_cullets.jpeg'
-
+// Import images
+import product1 from "../../assets/beer_cullet.jpeg";
+import product2 from "../../assets/glass.jpeg";
+import product3 from "../../assets/glass2.jpg";
+import product4 from "../../assets/green_cullets.jpeg";
+import product5 from "../../assets/metal.jpeg";
 
 const ProductsList = () => {
   const [activeCard, setActiveCard] = useState(null);
@@ -41,51 +31,86 @@ const ProductsList = () => {
     },
     {
       id: 4,
-      name: 'Decorative Glass',
+      name: 'Green Cullet',
       image: product4,
-      description: 'Beautiful decorative glass to enhance your decor.',
+      description: 'Beautiful green cullet for decorative purposes.',
     },
     {
       id: 5,
-      name: 'Decorative Glass',
+      name: 'Metal Glass',
       image: product5,
-      description: 'Beautiful decorative glass to enhance your decor.',
+      description: 'Durable and stylish metal glass for modern use.',
     },
     {
-      id: 6,
-      name: 'Decorative Glass',
-      image: product6,
-      description: 'Beautiful decorative glass to enhance your decor.',
+      id: 1,
+      name: 'Beer Cullet',
+      image: product1,
+      description: 'Premium quality beer cullet for various applications.',
     },
     {
-      id: 7,
-      name: 'Decorative Glass',
-      image: product7,
-      description: 'Beautiful decorative glass to enhance your decor.',
+      id: 2,
+      name: 'Blue Beer Glass',
+      image: product2,
+      description: 'Elegant blue beer glass for a stylish drink experience.',
     },
     {
-      id: 8,
-      name: 'Decorative Glass',
-      image: product8,
-      description: 'Beautiful decorative glass to enhance your decor.',
+      id: 3,
+      name: 'Clear Glass',
+      image: product3,
+      description: 'High-quality clear glass for versatile uses.',
     },
     {
-      id: 9,
-      name: 'Decorative Glass',
-      image: product9,
-      description: 'Beautiful decorative glass to enhance your decor.',
+      id: 4,
+      name: 'Green Cullet',
+      image: product4,
+      description: 'Beautiful green cullet for decorative purposes.',
     },
     {
-      id: 10,
-      name: 'Decorative Glass',
-      image: product10,
-      description: 'Beautiful decorative glass to enhance your decor.',
+      id: 5,
+      name: 'Metal Glass',
+      image: product5,
+      description: 'Durable and stylish metal glass for modern use.',
+    },
+    {
+      id: 1,
+      name: 'Beer Cullet',
+      image: product1,
+      description: 'Premium quality beer cullet for various applications.',
+    },
+    {
+      id: 2,
+      name: 'Blue Beer Glass',
+      image: product2,
+      description: 'Elegant blue beer glass for a stylish drink experience.',
+    },
+    {
+      id: 3,
+      name: 'Clear Glass',
+      image: product3,
+      description: 'High-quality clear glass for versatile uses.',
+    },
+    {
+      id: 4,
+      name: 'Green Cullet',
+      image: product4,
+      description: 'Beautiful green cullet for decorative purposes.',
+    },
+    {
+      id: 5,
+      name: 'Metal Glass',
+      image: product5,
+      description: 'Durable and stylish metal glass for modern use.',
     },
   ];
 
   // Handle card click
   const handleCardClick = (id) => {
-    setActiveCard(activeCard === id ? null : id);
+    setActiveCard(products.find((product) => product.id === id));
+  };
+
+  // Close popup
+  const handleClosePopup = () => {
+    setActiveCard(null);
   };
 
   return (
@@ -93,52 +118,53 @@ const ProductsList = () => {
       <h1 className="text-4xl font-bold text-center text-blue-800 mb-10">
         Our Premium Products
       </h1>
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {products.map((product) => (
           <div
             key={product.id}
-            className={`relative bg-white rounded-xl shadow-md transform transition-all duration-500 ease-in-out ${
-              activeCard === product.id
-                ? 'col-span-2 row-span-1 scale-105'
-                : 'scale-100'
-            }`}
+            className="relative bg-white rounded-xl shadow-md cursor-pointer hover:shadow-lg transition-all duration-300"
             onClick={() => handleCardClick(product.id)}
           >
             <img
               src={product.image}
               alt={product.name}
-              className={`w-full h-56 object-cover rounded-t-xl transition-all duration-500 ${
-                activeCard === product.id ? 'rounded-none' : 'rounded-t-xl'
-              }`}
+              className="w-full h-56 object-cover rounded-t-xl"
             />
-            <div
-              className={`p-6 transition-all duration-500 ${
-                activeCard === product.id ? 'text-center mt-4' : ''
-              }`}
-            >
-              <h2
-                className={`text-3xl font-bold text-gray-900 mb-3 transition-all duration-500 ${
-                  activeCard === product.id ? 'text-blue-800' : 'text-gray-900'
-                }`}
-              >
-                {product.name}
-              </h2>
-              <p
-                className={`text-gray-700 transition-all duration-500 ${
-                  activeCard === product.id ? 'hidden' : 'block'
-                }`}
-              >
-                {product.description}
+            <div className="p-6">
+              <h2 className="text-2xl font-bold text-gray-900">{product.name}</h2>
+              <p className="text-gray-700 mt-2">
+                {product.description.substring(0, 50)}...
               </p>
-              {activeCard === product.id && (
-                <p className="text-gray-700">
-                  Discover more about this product and its unique features.
-                </p>
-              )}
             </div>
           </div>
         ))}
       </div>
+
+      {/* Popup for active card */}
+      {activeCard && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
+          <div className="bg-white rounded-xl shadow-lg max-w-lg w-full p-6 relative">
+            {/* Close button */}
+            <button
+              className="absolute top-3 right-3 text-gray-500 hover:text-gray-800 text-xl"
+              onClick={handleClosePopup}
+            >
+              &times;
+            </button>
+            {/* Image */}
+            <img
+              src={activeCard.image}
+              alt={activeCard.name}
+              className="w-full h-64 object-cover rounded-lg"
+            />
+            {/* Details */}
+            <div className="mt-4 text-center">
+              <h2 className="text-3xl font-bold text-blue-800">{activeCard.name}</h2>
+              <p className="text-gray-700 mt-4">{activeCard.description}</p>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

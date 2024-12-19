@@ -1,21 +1,23 @@
 import React from "react";
 
 // Import images
-import product1 from "../../assets/img1.jpg";
-import product2 from "../../assets/logo.jpg";
-import product3 from "../../assets/img3.jpg";
-import product4 from "../../assets/img1.jpg";
-import product5 from "../../assets/logo.jpg";
-import product6 from "../../assets/img3.jpg";
-import product7 from "../../assets/img1.jpg";
-import product8 from "../../assets/logo.jpg";
-import product9 from "../../assets/img3.jpg";
-import product10 from "../../assets/img1.jpg";
-import product11 from "../../assets/logo.jpg";
-import product12 from "../../assets/img3.jpg";
-import product13 from "../../assets/img1.jpg";
-import product14 from "../../assets/logo.jpg";
-import product15 from "../../assets/img3.jpg";
+import product1 from "../../assets/beer_cullet.jpeg";
+import product2 from "../../assets/glass.jpeg";
+import product3 from "../../assets/glass2.jpg";
+import product4 from "../../assets/green_cullets.jpeg";
+import product5 from "../../assets/metal.jpeg";
+import product6 from "../../assets/beer_cullet.jpeg";
+import product7 from "../../assets/glass.jpeg";
+import product8 from "../../assets/glass2.jpg";
+import product9 from "../../assets/green_cullets.jpeg";
+import product10 from "../../assets/metal.jpeg";
+import product11 from "../../assets/beer_cullet.jpeg";
+import product12 from "../../assets/glass.jpeg";
+import product13 from "../../assets/glass2.jpg";
+import product14 from "../../assets/green_cullets.jpeg";
+import product15 from "../../assets/metal.jpeg";
+
+
 
 const Product = () => {
   // List of products with imported images

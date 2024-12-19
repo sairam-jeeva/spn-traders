@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import image1 from '../../assets/glass2.jpg';
 import image4 from '../../assets/beer_cullet.jpeg';
 import image5 from '../../assets/metal.jpeg';
-import image6 from '../../assets/beer_cullet.jpeg';
+import image6 from '../../assets/beer_cullet2.jpeg';
 
 
 const Header = () => {
